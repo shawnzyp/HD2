@@ -1,5 +1,6 @@
 import FeatureCard from "@/components/feature-card";
 import SectionHeading from "@/components/section-heading";
+import WikiManifestSection from "@/components/wiki-manifest-section";
 import {
   Badge,
   Box,
@@ -179,6 +180,8 @@ export default function HomePage() {
           </Container>
         ))}
       </Stack>
+
+      <WikiManifestSection />
 
       <Container maxW="6xl" mt={24}>
         <Box
