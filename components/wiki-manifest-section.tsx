@@ -1,4 +1,5 @@
 import manifest from "../hd2_wiki_manifest.json";
+import { createCoverageHighlights, loadCsvCoverage } from "@/lib/wiki-coverage";
 import SectionHeading from "@/components/section-heading";
 import NextLink from "next/link";
 import {
@@ -10,7 +11,11 @@ import {
   Link,
   SimpleGrid,
   Stack,
-  Text
+  Stat,
+  StatLabel,
+  StatNumber,
+  Text,
+  Wrap
 } from "@chakra-ui/react";
 
 type ManifestRecord = typeof manifest;
@@ -26,6 +31,32 @@ type NormalizedEntry = {
 const manifestEntries: NormalizedEntry[] = Object.entries(manifest)
   .map(([name, raw]) => normalizeEntry(name, raw))
   .sort((a, b) => a.name.localeCompare(b.name));
+
+const csvCoverage = loadCsvCoverage();
+const coverageHighlights = createCoverageHighlights(csvCoverage);
+
+const highlightCards = [
+  {
+    label: "Tracked categories",
+    value: coverageHighlights.trackedCategories,
+    helper: "Primary gameplay pillars synced nightly."
+  },
+  {
+    label: "Direct index links",
+    value: coverageHighlights.withIndexOrHub,
+    helper: "Categories with a definitive source hub."
+  },
+  {
+    label: "Category landing pages",
+    value: coverageHighlights.withCategoryLink,
+    helper: "Jump-off points for deeper exploration."
+  },
+  {
+    label: "Visual libraries mapped",
+    value: coverageHighlights.withVisualLibraries,
+    helper: "Icon or image collections for UI surfaces."
+  }
+];
 
 function normalizeEntry(name: string, raw: ManifestEntry): NormalizedEntry {
   const supportingLinks: { label: string; url: string }[] = [];
@@ -131,6 +162,36 @@ function formatExamples(examples: string[]): { visible: string[]; remainder: num
   };
 }
 
+function ResourceLinks({ title, links }: { title: string; links: { label: string; url: string }[] }) {
+  if (!links.length) {
+    return null;
+  }
+
+  return (
+    <Stack spacing={2} fontSize="sm">
+      <Text color="gray.300">{title}</Text>
+      <Wrap spacing={2} shouldWrapChildren>
+        {links.map((link) => (
+          <Link
+            key={link.url}
+            as={NextLink}
+            href={link.url}
+            isExternal
+            px={3}
+            py={1}
+            borderRadius="full"
+            borderWidth="1px"
+            borderColor="whiteAlpha.200"
+            _hover={{ borderColor: "brand.200", color: "brand.200" }}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </Wrap>
+    </Stack>
+  );
+}
+
 export default function WikiManifestSection() {
   return (
     <Box py={{ base: 16, md: 24 }}>
@@ -206,6 +267,112 @@ export default function WikiManifestSection() {
               );
             })}
           </SimpleGrid>
+          <Stack spacing={{ base: 10, md: 14 }}>
+            <SimpleGrid columns={{ base: 1, sm: 2, lg: 4 }} gap={4}>
+              {highlightCards.map((card) => (
+                <Box
+                  key={card.label}
+                  borderWidth="1px"
+                  borderColor="whiteAlpha.200"
+                  borderRadius="xl"
+                  p={5}
+                  bg="rgba(30, 41, 99, 0.35)"
+                  backdropFilter="blur(12px)"
+                >
+                  <Stat>
+                    <StatLabel textTransform="uppercase" fontSize="xs" letterSpacing="0.2em" color="gray.400">
+                      {card.label}
+                    </StatLabel>
+                    <StatNumber fontSize="3xl" fontWeight="bold">
+                      {card.value}
+                    </StatNumber>
+                    <Text fontSize="sm" color="gray.300">
+                      {card.helper}
+                    </Text>
+                  </Stat>
+                </Box>
+              ))}
+            </SimpleGrid>
+            <Stack spacing={6}>
+              <Stack spacing={3}>
+                <Text fontSize="xl" fontWeight="semibold">
+                  Category coverage map
+                </Text>
+                <Text color="gray.300" maxW="3xl">
+                  A human-audited slice of the hd2_wiki_manifest surfaces how we consolidate scattered wiki knowledge into
+                  digestible data stores, icon buckets, and reference examples for the companion experience.
+                </Text>
+              </Stack>
+              <Stack spacing={4}>
+                {csvCoverage.map((entry) => {
+                  const { visible, remainder } = formatExamples(entry.examples);
+                  return (
+                    <Box
+                      key={entry.category}
+                      borderWidth="1px"
+                      borderColor="whiteAlpha.200"
+                      borderRadius="xl"
+                      p={{ base: 5, md: 6 }}
+                      bg="whiteAlpha.50"
+                    >
+                      <Stack spacing={4}>
+                        <Stack spacing={1}>
+                          <Text fontSize="lg" fontWeight="semibold">
+                            {titleize(entry.category)}
+                          </Text>
+                          <Wrap spacing={2} shouldWrapChildren fontSize="sm">
+                            {entry.indexOrHub ? (
+                              <Link as={NextLink} href={entry.indexOrHub} isExternal color="brand.200">
+                                Index overview
+                              </Link>
+                            ) : null}
+                            {entry.categoryLink ? (
+                              <Link as={NextLink} href={entry.categoryLink} isExternal color="brand.200">
+                                Category hub
+                              </Link>
+                            ) : null}
+                          </Wrap>
+                        </Stack>
+                        <ResourceLinks title="Image archives" links={entry.imageBuckets} />
+                        <ResourceLinks title="Icon buckets" links={entry.iconBuckets} />
+                        {visible.length ? (
+                          <Stack spacing={2}>
+                            <Text fontSize="sm" color="gray.300">
+                              Flagged examples
+                            </Text>
+                            <HStack spacing={2} flexWrap="wrap">
+                              {visible.map((example) => (
+                                <Badge
+                                  key={example}
+                                  colorScheme="purple"
+                                  variant="outline"
+                                  px={3}
+                                  py={1}
+                                  borderRadius="full"
+                                >
+                                  {labelFromUrl(example)}
+                                </Badge>
+                              ))}
+                              {remainder > 0 ? (
+                                <Badge colorScheme="purple" variant="subtle" px={3} py={1} borderRadius="full">
+                                  +{remainder} more
+                                </Badge>
+                              ) : null}
+                            </HStack>
+                          </Stack>
+                        ) : null}
+                        {entry.notes ? (
+                          <Text fontSize="sm" color="gray.400">
+                            {entry.notes}
+                          </Text>
+                        ) : null}
+                      </Stack>
+                    </Box>
+                  );
+                })}
+              </Stack>
+            </Stack>
+          </Stack>
         </Stack>
       </Container>
     </Box>
