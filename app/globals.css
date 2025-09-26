@@ -1,0 +1,20 @@
+:root {
+  color-scheme: dark;
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #05060f;
+}
+
+main {
+  min-height: 100vh;
+}
