@@ -1,0 +1,207 @@
+{
+  "Warbonds": {
+    "index": "https://helldivers.wiki.gg/wiki/Warbonds",
+    "category": "https://helldivers.wiki.gg/wiki/Category:Warbonds",
+    "notable_pages": [
+      "https://helldivers.wiki.gg/wiki/Helldivers_Mobilize_Warbond",
+      "https://helldivers.wiki.gg/wiki/Force_of_Law_Premium_Warbond",
+      "https://helldivers.wiki.gg/wiki/Masters_of_Ceremony_Premium_Warbond",
+      "https://helldivers.wiki.gg/wiki/Control_Group_Premium_Warbond",
+      "https://helldivers.wiki.gg/wiki/Dust_Devils_Premium_Warbond"
+    ]
+  },
+  "Weapons": {
+    "hub": "https://helldivers.wiki.gg/wiki/Weapons",
+    "primary_category": "https://helldivers.wiki.gg/wiki/Category:Primary_Weapons",
+    "secondary_category": "https://helldivers.wiki.gg/wiki/Category:Secondary_Weapons",
+    "images": {
+      "all": "https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Weapons",
+      "primary": "https://helldivers.wiki.gg/wiki/Category:Primary_Weapon_Images",
+      "secondary": "https://helldivers.wiki.gg/wiki/Category:Secondary_Weapon_Images",
+      "throwables": "https://helldivers.wiki.gg/wiki/Category:Throwable_Weapon_Images"
+    },
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/SG-225_Breaker",
+      "https://helldivers.wiki.gg/wiki/LAS-16_Sickle",
+      "https://helldivers.wiki.gg/wiki/PLAS-1_Scorcher",
+      "https://helldivers.wiki.gg/wiki/SMG-37_Defender",
+      "https://helldivers.wiki.gg/wiki/MP-98_Knight"
+    ]
+  },
+  "Weapon_Attachments": {
+    "index": "https://helldivers.wiki.gg/wiki/Attachments",
+    "icons": "https://helldivers.wiki.gg/wiki/Category:Icons_-_Helldivers_2_-_Weapon_Attachments",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/R-2_Amendment",
+      "https://helldivers.wiki.gg/wiki/AR-61_Tenderizer"
+    ]
+  },
+  "Stratagems": {
+    "index": "https://helldivers.wiki.gg/wiki/Stratagems",
+    "category": "https://helldivers.wiki.gg/wiki/Category:Stratagems",
+    "icons": "https://helldivers.wiki.gg/wiki/Category:Icons_-_Helldivers_2_-_Stratagems",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/GL-21_Grenade_Launcher",
+      "https://helldivers.wiki.gg/wiki/Category:Backpack_Stratagems"
+    ]
+  },
+  "Armor": {
+    "index": "https://helldivers.wiki.gg/wiki/Armor",
+    "passives_index": "https://helldivers.wiki.gg/wiki/Armor_Passives",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/IE-12_Righteous",
+      "https://helldivers.wiki.gg/wiki/IE-57_Hell-Bent",
+      "https://helldivers.wiki.gg/wiki/SC-30_Trailblazer_Scout"
+    ]
+  },
+  "Capes": {
+    "category": "https://helldivers.wiki.gg/wiki/Category:Capes",
+    "images": "https://helldivers.wiki.gg/wiki/Category:Cape_Images",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/Eye_of_Freedom",
+      "https://helldivers.wiki.gg/wiki/Protector_of_the_Heart",
+      "https://helldivers.wiki.gg/wiki/Pillars_of_Freedom",
+      "https://helldivers.wiki.gg/wiki/Foesmasher",
+      "https://helldivers.wiki.gg/wiki/Badge_of_Order"
+    ]
+  },
+  "Helmets": {
+    "category": "https://helldivers.wiki.gg/wiki/Category:Helmets",
+    "images": "https://helldivers.wiki.gg/wiki/Category:Helmet_Images"
+  },
+  "Boosters": {
+    "index": "https://helldivers.wiki.gg/wiki/Boosters",
+    "icons": "https://helldivers.wiki.gg/wiki/Category:Booster_Icons",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/Hellpod_Space_Optimization",
+      "https://helldivers.wiki.gg/wiki/Sample_Scanner",
+      "https://helldivers.wiki.gg/wiki/Sample_Extricator",
+      "https://helldivers.wiki.gg/wiki/UAV_Recon_Booster"
+    ]
+  },
+  "Grenades": {
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/G-12_High_Explosive",
+      "https://helldivers.wiki.gg/wiki/G-16_Impact",
+      "https://helldivers.wiki.gg/wiki/G-10_Incendiary",
+      "https://helldivers.wiki.gg/wiki/G-23_Stun",
+      "https://helldivers.wiki.gg/wiki/G-4_Gas",
+      "https://helldivers.wiki.gg/wiki/G-123_Thermite",
+      "https://helldivers.wiki.gg/wiki/G-50_Seeker"
+    ],
+    "image_bucket": "https://helldivers.wiki.gg/wiki/Category:Throwable_Weapon_Images"
+  },
+  "Enemies": {
+    "hub": "https://helldivers.wiki.gg/wiki/Factions",
+    "factions": [
+      "https://helldivers.wiki.gg/wiki/Terminids",
+      "https://helldivers.wiki.gg/wiki/Automatons",
+      "https://helldivers.wiki.gg/wiki/Illuminate"
+    ],
+    "enemy_armor_images": "https://helldivers.wiki.gg/wiki/Category:Helldivers_2_-_Enemy_Armor"
+  },
+  "Ship_Modules": {
+    "index": "https://helldivers.wiki.gg/wiki/Ship_Modules",
+    "category": "https://helldivers.wiki.gg/wiki/Category:Ship_Modules",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/Engineering_Bay",
+      "https://helldivers.wiki.gg/wiki/Patriotic_Administration_Center",
+      "https://helldivers.wiki.gg/wiki/Advanced_Construction",
+      "https://helldivers.wiki.gg/wiki/More_Guns",
+      "https://helldivers.wiki.gg/wiki/Cross-Platform_Compatibility",
+      "https://helldivers.wiki.gg/wiki/Streamlined_Request_Process",
+      "https://helldivers.wiki.gg/wiki/Shock_Absorption_Gel"
+    ]
+  },
+  "Planets": {
+    "index": "https://helldivers.wiki.gg/wiki/Planets_and_Sectors",
+    "category": "https://helldivers.wiki.gg/wiki/Category:Planets",
+    "images": "https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Planets",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/Super_Earth",
+      "https://helldivers.wiki.gg/wiki/Shallus",
+      "https://helldivers.wiki.gg/wiki/Inari",
+      "https://helldivers.wiki.gg/wiki/Bellatrix"
+    ]
+  },
+  "Biomes": {
+    "index": "https://helldivers.wiki.gg/wiki/Biomes",
+    "category": "https://helldivers.wiki.gg/wiki/Category:Biomes",
+    "images": "https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Biomes",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/Plains",
+      "https://helldivers.wiki.gg/wiki/Tundra",
+      "https://helldivers.wiki.gg/wiki/Desert_Dunes",
+      "https://helldivers.wiki.gg/wiki/Acidic_Badlands",
+      "https://helldivers.wiki.gg/wiki/Boneyard"
+    ]
+  },
+  "POIs": {
+    "galaxy_pois": "https://helldivers.wiki.gg/wiki/Galaxy_Places_of_Interest",
+    "minor_pois_index": "https://helldivers.wiki.gg/wiki/Minor_Places_of_Interest",
+    "minor_poi_category": "https://helldivers.wiki.gg/wiki/Category:Minor_Places_of_Interest",
+    "icons": "https://helldivers.wiki.gg/wiki/Category:Icons_-_POI_Icons",
+    "examples": [
+      "https://helldivers.wiki.gg/wiki/Crashed_Ship"
+    ]
+  },
+  "Effects": {
+    "index": "https://helldivers.wiki.gg/wiki/Effects"
+  },
+  "Environmental_Hazards": {
+    "index": "https://helldivers.wiki.gg/wiki/Environmental_Hazards",
+    "conditions": "https://helldivers.wiki.gg/wiki/Environmental_Conditions",
+    "factional": [
+      "https://helldivers.wiki.gg/wiki/Automaton_Hazards",
+      "https://helldivers.wiki.gg/wiki/Automaton_Barbed_Wire",
+      "https://helldivers.wiki.gg/wiki/Bug_Mine",
+      "https://helldivers.wiki.gg/wiki/Hive_World"
+    ],
+    "images": "https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Environmental_Hazards"
+  },
+  "Operations_and_Missions": {
+    "index": "https://helldivers.wiki.gg/wiki/Missions",
+    "icons": "https://helldivers.wiki.gg/wiki/Category:Icons_-_Helldivers_2_-_Missions"
+  },
+  "Galactic_War_Mechanics": {
+    "index": "https://helldivers.wiki.gg/wiki/Second_Galactic_War_Mechanics"
+  },
+  "Combat": {
+    "index": "https://helldivers.wiki.gg/wiki/Combat"
+  },
+  "Damage": {
+    "index": "https://helldivers.wiki.gg/wiki/Damage"
+  },
+  "Levels_and_Player_Progression": {
+    "levels": "https://helldivers.wiki.gg/wiki/Levels",
+    "rank_icons": "https://helldivers.wiki.gg/wiki/Category:Icons_-_Helldivers_2_-_Ranks"
+  },
+  "Difficulty": {
+    "index": "https://helldivers.wiki.gg/wiki/Difficulty"
+  },
+  "Currency": {
+    "overview": "https://helldivers.wiki.gg/wiki/Currency",
+    "medals": "https://helldivers.wiki.gg/wiki/Medal",
+    "samples": "https://helldivers.wiki.gg/wiki/Sample",
+    "requisition_slips": "https://helldivers.wiki.gg/wiki/Requisition_Slips",
+    "super_credits": "https://helldivers.wiki.gg/wiki/Super_Credits",
+    "images": "https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Currency"
+  },
+  "Achievements_Trophies": {
+    "index": "https://helldivers.wiki.gg/wiki/Achievements"
+  },
+  "Orders": {
+    "major_orders": "https://helldivers.wiki.gg/wiki/Major_Orders",
+    "personal_orders": "https://helldivers.wiki.gg/wiki/Personal_Orders",
+    "images_major": "https://helldivers.wiki.gg/wiki/Category:Images_-_Helldivers_2_-_Major_Orders"
+  },
+  "Lore": {
+    "start_here": "https://helldivers.wiki.gg/wiki/Helldivers_2",
+    "npc_index": "https://helldivers.wiki.gg/wiki/Non-Playable_Characters",
+    "factions_overview": "https://helldivers.wiki.gg/wiki/Factions"
+  },
+  "Stores_Unlocks": {
+    "overview": "https://helldivers.wiki.gg/wiki/Stores_and_Unlocks",
+    "superstore": "https://helldivers.wiki.gg/wiki/Superstore"
+  }
+}
